@@ -12,7 +12,6 @@ This project follows **Semantic Versioning (SemVer)**.
 
 * Mouse-controlled player movement.
 * Frame rate capped at 120 FPS using `pygame.time.Clock`.
-* Custom game title rendered using a TrueType font.
 * Improved game loop organization following the Input → Update → Render pattern.
 
 ### Changed
