@@ -6,6 +6,16 @@ This project follows **Semantic Versioning (SemVer)**.
 
 ---
 
+## [0.3.0] - 2026-06-30
+
+### Added
+
+* Shooting mechanic — lasers fire on mouse click and travel upward from the ship.
+* Automatic removal of lasers once they move off-screen.
+* Delta-time-based movement for frame-rate-independent gameplay.
+
+---
+
 ## [0.2.0] - 2026-06-29
 
 ### Added
