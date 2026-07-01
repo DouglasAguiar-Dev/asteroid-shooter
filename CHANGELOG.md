@@ -6,13 +6,40 @@ This project follows **Semantic Versioning (SemVer)**.
 
 ---
 
+## [0.4.0] - 2026-07-01
+
+### Added
+
+* Random asteroid spawning system.
+* Randomized asteroid movement with horizontal drift.
+* Real-time score display based on survival time.
+* Custom timer event for spawning meteors.
+* Meteor management system using dynamic lists.
+* `pygame.math.Vector2` for directional asteroid movement.
+
+### Changed
+
+* Refactored gameplay into reusable update functions (`laser_update()`, `meteor_update()`, `laser_timer()`, and `display_score()`).
+* Improved game loop organization by separating input handling, updates, and rendering.
+* Updated the project documentation to reflect the latest gameplay features.
+
+---
+
 ## [0.3.0] - 2026-06-30
 
 ### Added
 
-* Shooting mechanic — lasers fire on mouse click and travel upward from the ship.
-* Automatic removal of lasers once they move off-screen.
-* Delta-time-based movement for frame-rate-independent gameplay.
+* Mouse-controlled player movement.
+* Laser shooting mechanic.
+* Shooting cooldown system.
+* Frame-rate-independent laser movement using delta time.
+* Dynamic laser management (creation, movement, and removal).
+* Mouse click controls for firing lasers.
+
+### Changed
+
+* Refactored laser logic into reusable functions.
+* Updated the README with the latest project features and controls.
 
 ---
 
@@ -21,13 +48,14 @@ This project follows **Semantic Versioning (SemVer)**.
 ### Added
 
 * Mouse-controlled player movement.
-* Frame rate capped at 120 FPS using `pygame.time.Clock`.
+* Frame rate capped at 120 FPS.
+* Custom game title rendered using a TrueType font.
 * Improved game loop organization following the Input → Update → Render pattern.
 
 ### Changed
 
 * Refined the rendering pipeline to ensure the correct draw order (background → player → UI text).
-* Updated the project documentation with a development roadmap and versioning.
+* Added project versioning.
 
 ---
 
@@ -41,5 +69,5 @@ This project follows **Semantic Versioning (SemVer)**.
 * Background image rendering.
 * Player ship sprite rendering.
 * Custom font loading and title display.
-* Event handling for clean application shutdown.
 * Core game loop structure.
+* Clean application shutdown.
