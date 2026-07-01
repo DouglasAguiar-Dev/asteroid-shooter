@@ -1,8 +1,8 @@
 # 🚀 Asteroid Shooter
 
-**Version:** **v0.4.0**
+**Version:** **v0.5.0**
 
-A 2D arcade space shooter built with **Python** and **Pygame**. Pilot your spacecraft through deep space, dodge incoming asteroids, destroy them with your laser, and survive for as long as possible while your score continuously increases.
+A 2D arcade space shooter built with **Python** and **Pygame**. Pilot your spacecraft through deep space, destroy incoming asteroids with your laser, avoid collisions, and survive for as long as possible while your score increases over time.
 
 This project is part of my software engineering portfolio as I develop practical experience in Python, game development, and software engineering while working toward becoming a Junior Full-Stack Software Developer in Ireland.
 
@@ -11,16 +11,18 @@ This project is part of my software engineering portfolio as I develop practical
 ## ✨ Features
 
 * 1280 × 720 game window
-* Background and player ship rendering
-* Custom font and game title
 * Mouse-controlled player movement
-* Shooting mechanic — click to fire lasers
-* Laser cooldown system
+* Laser shooting mechanic
+* Shooting cooldown system
 * Random asteroid spawning
 * Randomized asteroid movement
+* Laser vs. asteroid collision detection
+* Player vs. asteroid collision detection
+* Sound effects for shooting and explosions
+* Background music
 * Real-time score counter
 * Frame-rate-independent movement using delta time
-* Frame rate capped at 120 FPS for consistent performance
+* Frame rate capped at 120 FPS
 * Structured game loop (Input → Update → Render)
 * Clean application shutdown
 
@@ -32,18 +34,20 @@ This project demonstrates the following concepts:
 
 * Pygame initialization
 * Display and window management
-* Image and font loading
+* Image, font, and audio loading
 * Surface rendering with `blit()`
 * Positioning objects using `pygame.Rect`
-* Mouse input handling (movement and click events)
+* Rectangle-based collision detection
+* Mouse input handling
 * Event-driven programming
 * Custom timer events
-* Delta-time-based movement
+* Delta-time movement
 * Random number generation
-* `pygame.math.Vector2` for movement
-* Dynamic list management (creating, updating, and removing game objects)
+* `pygame.math.Vector2`
+* Dynamic list management
 * Function decomposition
 * Game loop architecture
+* Basic game state management
 * Asset organization
 
 ---
@@ -54,12 +58,17 @@ This project demonstrates the following concepts:
 asteroid-shooter/
 │
 ├── assets/
-│   └── graphics/
-│       ├── background.png
-│       ├── laser.png
-│       ├── meteor.png
-│       ├── ship.png
-│       └── subatomic.ttf
+│   ├── graphics/
+│   │   ├── background.png
+│   │   ├── laser.png
+│   │   ├── meteor.png
+│   │   ├── ship.png
+│   │   └── subatomic.ttf
+│   │
+│   └── sounds/
+│       ├── laser.ogg
+│       ├── explosion.wav
+│       └── music.wav
 │
 ├── main.py
 ├── README.md
@@ -76,7 +85,7 @@ asteroid-shooter/
 * Python 3.12+
 * Pygame
 
-Install Pygame:
+Install the dependency:
 
 ```bash
 pip install pygame
@@ -94,6 +103,7 @@ python main.py
 
 * **Move the mouse** — Control the ship
 * **Left-click** — Fire a laser
+* **Avoid asteroids** — A collision ends the game
 
 ---
 
@@ -108,13 +118,14 @@ python main.py
 
 ## 🎯 Learning Goals
 
-This project is helping me improve my understanding of:
+This project is helping me strengthen my understanding of:
 
 * Game development fundamentals
 * Procedural programming
 * Event-driven programming
-* Real-time game loops
-* Delta-time movement
+* Collision detection
+* Delta-time game loops
+* Audio integration
 * Clean and maintainable Python code
 * Professional Git and GitHub workflows
 
@@ -124,6 +135,6 @@ This project is helping me improve my understanding of:
 
 **Douglas Aguiar**
 
-Computer Science student at Dorset College Dublin and self-taught Python developer building projects to become a Junior Full-Stack Software Developer in Ireland.
+Computer Science student at Dorset College Dublin and self-taught Python developer building practical projects to become a Junior Full-Stack Software Developer in Ireland.
 
 **GitHub:** https://github.com/DouglasAguiar-Dev

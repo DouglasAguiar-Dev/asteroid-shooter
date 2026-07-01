@@ -6,6 +6,25 @@ This project follows **Semantic Versioning (SemVer)**.
 
 ---
 
+## [0.5.0] - 2026-07-01
+
+### Added
+
+* Laser vs. asteroid collision detection.
+* Player vs. asteroid collision detection.
+* Shooting sound effects.
+* Explosion sound effects.
+* Background music.
+* Game over when the player collides with an asteroid.
+
+### Changed
+
+* Improved the shooting cooldown implementation by passing the last shot timestamp to the timer function.
+* Refactored gameplay systems into reusable functions for improved readability and maintainability.
+* Updated project documentation to reflect the latest gameplay features.
+
+---
+
 ## [0.4.0] - 2026-07-01
 
 ### Added
@@ -21,7 +40,6 @@ This project follows **Semantic Versioning (SemVer)**.
 
 * Refactored gameplay into reusable update functions (`laser_update()`, `meteor_update()`, `laser_timer()`, and `display_score()`).
 * Improved game loop organization by separating input handling, updates, and rendering.
-* Updated the project documentation to reflect the latest gameplay features.
 
 ---
 
