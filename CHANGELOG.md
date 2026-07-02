@@ -2,7 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
-This project follows **Semantic Versioning (SemVer)**.
+This project follows **Semantic Versioning (SemVer).**
+
+---
+
+## [0.6.0] - 2026-07-02
+
+### Added
+
+* Refactored the project into an object-oriented architecture.
+* `Ship` class derived from `pygame.sprite.Sprite`.
+* `Laser` class derived from `pygame.sprite.Sprite`.
+* `Meteor` class derived from `pygame.sprite.Sprite`.
+* Dedicated `Score` class for rendering the score.
+* Sprite Groups for automatic object management.
+* Pixel-perfect collision detection using sprite masks.
+* Rotating meteors.
+* Random meteor scaling.
+* Configurable shooting cooldown.
+* Background music and sound effect integration within sprite classes.
+
+### Changed
+
+* Replaced manual object lists with `pygame.sprite.Group`.
+* Moved gameplay logic into class methods (`update()`, `rotate()`, `laser_shoot()`, `meteor_collision()`, etc.).
+* Improved project readability through object-oriented design.
+* Simplified the main game loop by delegating behaviour to sprites.
+* Updated project documentation.
 
 ---
 
@@ -19,9 +45,8 @@ This project follows **Semantic Versioning (SemVer)**.
 
 ### Changed
 
-* Improved the shooting cooldown implementation by passing the last shot timestamp to the timer function.
-* Refactored gameplay systems into reusable functions for improved readability and maintainability.
-* Updated project documentation to reflect the latest gameplay features.
+* Improved the shooting cooldown implementation.
+* Refactored gameplay into reusable helper functions.
 
 ---
 
@@ -29,17 +54,16 @@ This project follows **Semantic Versioning (SemVer)**.
 
 ### Added
 
-* Random asteroid spawning system.
-* Randomized asteroid movement with horizontal drift.
-* Real-time score display based on survival time.
+* Random asteroid spawning.
+* Random asteroid movement.
+* Real-time score display.
 * Custom timer event for spawning meteors.
-* Meteor management system using dynamic lists.
-* `pygame.math.Vector2` for directional asteroid movement.
+* Delta-time movement for meteors.
+* `pygame.math.Vector2` movement.
 
 ### Changed
 
-* Refactored gameplay into reusable update functions (`laser_update()`, `meteor_update()`, `laser_timer()`, and `display_score()`).
-* Improved game loop organization by separating input handling, updates, and rendering.
+* Refactored gameplay into reusable functions.
 
 ---
 
@@ -49,15 +73,13 @@ This project follows **Semantic Versioning (SemVer)**.
 
 * Mouse-controlled player movement.
 * Laser shooting mechanic.
-* Shooting cooldown system.
-* Frame-rate-independent laser movement using delta time.
-* Dynamic laser management (creation, movement, and removal).
-* Mouse click controls for firing lasers.
+* Shooting cooldown.
+* Delta-time laser movement.
+* Dynamic laser management.
 
 ### Changed
 
 * Refactored laser logic into reusable functions.
-* Updated the README with the latest project features and controls.
 
 ---
 
@@ -67,12 +89,12 @@ This project follows **Semantic Versioning (SemVer)**.
 
 * Mouse-controlled player movement.
 * Frame rate capped at 120 FPS.
-* Custom game title rendered using a TrueType font.
-* Improved game loop organization following the Input → Update → Render pattern.
+* Custom game title.
+* Structured game loop.
 
 ### Changed
 
-* Refined the rendering pipeline to ensure the correct draw order (background → player → UI text).
+* Improved rendering order.
 * Added project versioning.
 
 ---
@@ -82,10 +104,9 @@ This project follows **Semantic Versioning (SemVer)**.
 ### Added
 
 * Initial Pygame project setup.
-* 1280 × 720 game window.
-* Custom window title.
-* Background image rendering.
-* Player ship sprite rendering.
-* Custom font loading and title display.
-* Core game loop structure.
+* Game window.
+* Background rendering.
+* Player sprite.
+* Custom font.
+* Main game loop.
 * Clean application shutdown.

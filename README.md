@@ -1,10 +1,10 @@
 # 🚀 Asteroid Shooter
 
-**Version:** **v0.5.0**
+**Version:** **v0.6.0**
 
-A 2D arcade space shooter built with **Python** and **Pygame**. Pilot your spacecraft through deep space, destroy incoming asteroids with your laser, avoid collisions, and survive for as long as possible while your score increases over time.
+A 2D arcade space shooter built with **Python** and **Pygame**. Control your spacecraft with the mouse, destroy incoming asteroids with lasers, avoid collisions, and survive for as long as possible while your score continuously increases.
 
-This project is part of my software engineering portfolio as I develop practical experience in Python, game development, and software engineering while working toward becoming a Junior Full-Stack Software Developer in Ireland.
+This project is part of my software engineering portfolio as I develop practical experience in Python, object-oriented programming, game development, and software engineering while working toward becoming a Junior Full-Stack Software Developer in Ireland.
 
 ---
 
@@ -12,19 +12,18 @@ This project is part of my software engineering portfolio as I develop practical
 
 * 1280 × 720 game window
 * Mouse-controlled player movement
-* Laser shooting mechanic
-* Shooting cooldown system
+* Laser shooting with cooldown
 * Random asteroid spawning
-* Randomized asteroid movement
-* Laser vs. asteroid collision detection
-* Player vs. asteroid collision detection
-* Sound effects for shooting and explosions
+* Random asteroid sizes, speeds, and movement directions
+* Rotating asteroids
+* Pixel-perfect collision detection using masks
+* Laser vs. asteroid collisions
+* Player vs. asteroid collisions (game over)
+* Shooting and explosion sound effects
 * Background music
 * Real-time score counter
 * Frame-rate-independent movement using delta time
-* Frame rate capped at 120 FPS
-* Structured game loop (Input → Update → Render)
-* Clean application shutdown
+* Object-oriented game architecture using Pygame Sprites and Sprite Groups
 
 ---
 
@@ -32,22 +31,20 @@ This project is part of my software engineering portfolio as I develop practical
 
 This project demonstrates the following concepts:
 
-* Pygame initialization
-* Display and window management
-* Image, font, and audio loading
-* Surface rendering with `blit()`
-* Positioning objects using `pygame.Rect`
-* Rectangle-based collision detection
-* Mouse input handling
+* Object-oriented programming (OOP)
+* Classes and objects
+* Inheritance with `pygame.sprite.Sprite`
+* Encapsulation
+* Polymorphism through `Sprite.update()`
+* Sprite Groups
+* Image, font, and sound loading
+* Pixel-perfect collision detection using masks
+* Delta-time movement
+* `pygame.math.Vector2`
+* Random number generation
 * Event-driven programming
 * Custom timer events
-* Delta-time movement
-* Random number generation
-* `pygame.math.Vector2`
-* Dynamic list management
-* Function decomposition
-* Game loop architecture
-* Basic game state management
+* Real-time game loop architecture
 * Asset organization
 
 ---
@@ -73,6 +70,7 @@ asteroid-shooter/
 ├── main.py
 ├── README.md
 ├── CHANGELOG.md
+├── requirements.txt
 └── .gitignore
 ```
 
@@ -85,10 +83,10 @@ asteroid-shooter/
 * Python 3.12+
 * Pygame
 
-Install the dependency:
+Install the dependencies:
 
 ```bash
-pip install pygame
+pip install -r requirements.txt
 ```
 
 Run the project:
@@ -101,9 +99,9 @@ python main.py
 
 ## 🎮 Controls
 
-* **Move the mouse** — Control the ship
+* **Move the mouse** — Control the spaceship
 * **Left-click** — Fire a laser
-* **Avoid asteroids** — A collision ends the game
+* **Avoid meteors** — A collision ends the game
 
 ---
 
@@ -120,13 +118,13 @@ python main.py
 
 This project is helping me strengthen my understanding of:
 
-* Game development fundamentals
-* Procedural programming
-* Event-driven programming
+* Object-oriented programming
+* Game architecture
+* Sprite-based game development
 * Collision detection
 * Delta-time game loops
-* Audio integration
-* Clean and maintainable Python code
+* Software design and maintainability
+* Clean Python code
 * Professional Git and GitHub workflows
 
 ---
