@@ -2,7 +2,6 @@ import sys
 import pygame
 from random import randint, uniform
 
-
 def display_score():
     score = f'Score: {pygame.time.get_ticks() // 1000}'
     text_surf = font.render(score, True, (255, 255, 255))
